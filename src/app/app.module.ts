@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UiSwitchModule } from 'ngx-ui-switch';
 
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +13,10 @@ import { LayoutComponent } from './layout/layout.component';
     LayoutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    UiSwitchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

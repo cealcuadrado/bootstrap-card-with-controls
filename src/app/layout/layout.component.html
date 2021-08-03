@@ -1,10 +1,24 @@
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <div class="form-group text-center">
+      <label>Mostrar controles</label>
+      <br>
+      <ui-switch [(ngModel)]="showControls"></ui-switch>
+    </div>
+  </div>
+</div>
+
+<hr>
+
 <div class="card">
-  <div class="card-header d-flex justify-content-between align-items-center bg-primary text-white">
-    <div></div>
+  <div class="card-header d-flex align-items-center bg-primary text-white" [ngClass]="setCard()">
+    <div *ngIf="showControls"></div>
     <h4 class="card-title">Card Title</h4>
-    <a href="#" class="text-white">
-      <i class="fa fa-times fa-fw"></i>
-    </a>
+    <div *ngIf="showControls">
+      <a href="#" class="text-white">
+        <i class="fa fa-times fa-fw"></i>
+      </a>
+    </div>
   </div>
   <div class="card-body">
     <p>Cuerpo</p>

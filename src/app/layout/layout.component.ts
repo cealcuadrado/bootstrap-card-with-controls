@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
+  public showControls: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  setCard(): string {
+    return this.showControls ? 'justify-content-between' : 'justify-content-center';
+  }
 }
